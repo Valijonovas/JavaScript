@@ -1,0 +1,141 @@
+@media screen and (max-width:1124px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    html {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0 20px;
+    }
+    
+    .container_header {
+        padding: 0 20px;
+    }
+    
+    .owl-prev {
+        left: 15%;
+    }
+    
+    .owl-next {
+        right: 15%;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    html {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0 20px;
+    }
+    
+    .container_header {
+        padding: 0 20px;
+    }
+    
+    .owl-prev {
+        left: 15%;
+    }
+    
+    .owl-next {
+        right: 15%;
+    }
+
+    .gift__img{
+        width: 25%;
+    }
+    
+}
+
+@media screen and (max-width:360px) {
+    html {
+        font-size: 16px;
+    }
+    .film__cards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .why_us_first_row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}@media screen and (max-width:1124px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    html {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0 20px;
+    }
+    
+    .container_header {
+        padding: 0 20px;
+    }
+    
+    .owl-prev {
+        left: 15%;
+    }
+    
+    .owl-next {
+        right: 15%;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    html {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0 20px;
+    }
+    
+    .container_header {
+        padding: 0 20px;
+    }
+    
+    .owl-prev {
+        left: 15%;
+    }
+    
+    .owl-next {
+        right: 15%;
+    }
+
+    .gift__img{
+        width: 25%;
+    }
+    
+}
+
+@media screen and (max-width:360px) {
+    html {
+        font-size: 16px;
+    }
+    .film__cards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .why_us_first_row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
