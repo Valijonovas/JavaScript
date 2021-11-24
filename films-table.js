@@ -1,13 +1,7 @@
-let films = [{
-        time: "10:00",
-        name: "Человек-паук",
-        genre: "Фантастика, боевик, приключения",
-    },
-
-    {
-        time: " 12:00",
-        name: "Собачья жизнь 2",
-        genre: "Фэнтэзи, драма, комедия",
+movies = [{
+        time: "16:00",
+        name: "Люди в чёрном: Интэрнэшнл",
+        genre: "Фантастика, боевик, комедия",
     },
 
     {
@@ -17,39 +11,66 @@ let films = [{
     },
 
     {
-        time: "16:00",
-        name: "Люди в чёрном: Интэрнэшнл",
-        genre: "Фантастика, боевик, комедия",
+        time: "12:00",
+        name: "Собачья жизнь 2",
+        genre: "Фэнтэзи, драма, комедия",
+    },
+
+    {
+        adult: true,
+        time: "10:00",
+        name: "Человек-паук 2",
+        genre: "Фантастика, боевик, приключения",
+    },
+    {
+        adult: false,
+        time: "10:00",
+        name: "Человек-паук",
+        genre: "Фантастика, боевик, приключения",
     },
 ];
 
-let table_body = document.getElementById('t_body');
+table_body = document.getElementById('t_body')
 
-for (i = 0; i < films.length; i++) {
+const film_helper = {
+    getTitle() {
+        return this.name;
+    },
 
-    let row = 'first_row';
+    getTime() {
+        return this.time;
+    },
 
-    if (i % 2 === 0) {
-        row = 'second_row';
+    getGeneres() {
+        return this.genre;
     }
+}
 
-    table_body.innerHTML += `
-    <tr class= ${row}>
+function generator_film_row(film) {
+    return `<tr class = "first_row">
     <td class="check">
         <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.60581 6.79378L1.46056 3.93033L0.787354 4.66979L4.70255 8.23421L10.8223 0.94099L10.0562 0.298203L4.60581 6.79378Z" fill="#A3CC40"/>
         </svg>
+    
     </td>
+
     <td class="cell_session">
-        ${films[i].time}
+        ${film_helper.getTime.apply(film)}
     </td>
     <td class="cell_film_name">
-        ${films[i].name}
+        ${film_helper.getTitle.apply(film)}
     </td>
     <td class="cell_genre">
-        ${films[i].genre}
+        ${film_helper.getGeneres.apply(film)}
     </td>
-   </tr>
-    `
+
+    </tr>`
+}
+
+for (film of movies) {
+    if (!film.adult) {
+        table_body.innerHTML += generator_film_row(film);
+    }
 }
 

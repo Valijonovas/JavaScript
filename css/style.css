@@ -335,6 +335,11 @@ tbody tr:last-child td.check {
     height: 2.8125rem;
 }
 
+.first_row:hover{
+    background-color: #4C4D4F;
+    transition: 3ms;
+}
+
 .second_row {
     background-color: #4c4d4f;
     height: 2.8125rem;
@@ -402,7 +407,6 @@ tbody tr:last-child td.check {
 
 .podarok {
     position: absolute;
-    right: 65rem;
     border-radius: 50%;
 }
 
@@ -550,6 +554,12 @@ tbody tr:last-child td.check {
     width: 30%;
     margin: 1.25rem;
     margin-left: 10rem;
+}
+
+.card__hover:hover {
+    background: none;
+    transition: 0.4s;
+    color: #A3CC40;   
 }
 
 .card__box {
